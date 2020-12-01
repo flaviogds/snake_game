@@ -27,7 +27,7 @@ const resetGame = () => {
     play(false)
     limit = 1;
     score = 0;
-    record = localStorage.getItem("@snake/record")
+    record = localStorage.getItem("@snake/record") ? localStorage.getItem("@snake/record") : 0;
     speed = 200;
     direction ='';
     snake = [{
@@ -45,6 +45,9 @@ resetGame();
 const drawBoard = () => {
     context.fillStyle = "#83E377";
     context.fillRect(0, 0, 512, 512);
+    newBoard = document.getElementById("root").style;
+    newBoard.border = "1px solid #54478c60";
+    newBoard.boxShadow = "12px 12px 8px 6px rgba(4, 139, 168, 0.3)";
 }
 const drawSnake = () => {
     for(i = 0; i < snake.length; i ++){
@@ -168,7 +171,7 @@ function mainGame() {
     });
 }
 
-function play(playGame, pause){ 
+function play(playGame, pause){
     if(playGame){
         !pause ? resetGame() : null;
         game = setInterval(mainGame, speed);

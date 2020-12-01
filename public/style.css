@@ -86,11 +86,6 @@ body, html {
 .record{
     width: 200px;
 }
-
-.main-frame{
-    border: 1px solid #54478c60;
-    box-shadow: 12px 12px 8px 6px rgba(4, 139, 168, 0.3);
-}
 .main-frame img {
     background: url("../src/image/banner.png") no-repeat;
     background-size: 100% 100%;
@@ -116,6 +111,7 @@ body, html {
     position: relative;
     width: 500px;
     height: 500px;
+    padding: 40px 0;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -147,15 +143,82 @@ body, html {
 }
 .modal-about div{
     display: flex;
-    width: 30%;
+    width: 100%;
     justify-content: space-evenly;
-}
-.modal-about div > a{
-    text-decoration: none;
-    color: #141414;
 }
 .about{
     position: relative;
     bottom: 10%;
     left: 40%;
 }
+.links{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.ballon{
+    position: relative;
+    display: inline-block;
+    color: #54478C;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.ballon span{
+    visibility: hidden;
+    width: 120px;
+    padding: 5px 0;
+    margin-left: -60px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    color: #54478C;
+    background-color: #f1c453;
+    text-align: center;
+}
+.ballon span::After{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #f1c453 transparent transparent transparent;
+}
+
+.ballon:hover span{
+    visibility: visible;
+}
+
+
+
+/* .links{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.ballon {
+    display: flex;
+    padding: 0;
+}
+  
+.ballon > span {
+visibility: hidden;
+
+
+/* Position the tooltip */
+/* position: relative;
+z-index: 1;
+top: -75px;
+left: -40px;
+}
+ */
+/* .ballon:hover > span {
+    visibility: visible;
+} */ 
