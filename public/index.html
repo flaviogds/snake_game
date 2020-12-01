@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <script defer rel="text/javascript" src="../src/main.js"></script>
+    <script defer src="https://kit.fontawesome.com/26628ec3e8.js" crossorigin="anonymous"></script>
+
+
+    <title>Snake Game</title>
+</head>
+<body>
+    <header class="nav-wrapper">
+        <h1 class="nav-logo">SNAKE GAME</h1>
+        <nav class="navbar">
+            
+            <div class="record">
+                <span>Record atual:</span>
+                <span id="record"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="control-bar">
+            <button id="play">Iniciar</button>
+            <button id="pause">Pausar</button>
+            <div class="score">
+                <span>
+                    Score:
+                </span>
+                <span id="score"></span>
+            </div>
+            
+        </div>
+        <canvas id="root" class="main-frame" width="512px" height="512px">
+            <img id="banner" src="../src/image/banner.png" alt="">
+        </canvas>
+        <div id="modal-wrapper" class="modal-wrapper">
+            <div id="modal-smooth" class="modal-smooth"></div>
+            <div id="modal" class="modal"></div>
+        </div>
+
+        <div id="about" class="modal-wrapper">
+            <div class="modal-smooth"></div>
+            <div class="modal modal-about">
+                <h3>Sobre</h3>
+                <p>
+                    Este web app é uma aplicação simples, uma reprodução
+                    do clássico jogo Blockade de 1976.
+                    <br>
+                    Foi desenvolvido como parte do meu portifólio profissional e como uma descontração;
+                    <br>
+                    <br>
+                    Divirta-se.
+                </p>
+                <div>
+                    <a href="https://github.com/flaviogds/"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://github.com/flaviogds/snake_game"><i class="fas fa-code-branch fa-2x"></i></i></a>
+                    <a href="https://www.linkedin.com/in/santosflavio/"><i class="fab fa-linkedin fa-2x"></i></i></a>
+                </div>
+                <button id="btn-close">Fechar</button>
+            </div>
+        </div>
+        <button id="btn-about" class="about">Sobre</button>
+    </main>
+    
+</body>
+</html>
